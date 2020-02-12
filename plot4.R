@@ -25,8 +25,7 @@ plot(dat1$DatTime, dat1$Voltage, type="l", xlab="datetime",ylab="Voltage")
 plot(dat1$DatTime, dat1$Sub_metering_1, type="l", xlab="",ylab="Energy sub metering")
 lines(dat1$DatTime,dat1$Sub_metering_2, col="red")
 lines(dat1$DatTime,dat1$Sub_metering_3, col="blue")
-## Need to fix outline of legen still
-legend("topright", lty=1,bty="o", col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright", lty=1,bty="n", col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 ## Plot Bottom Right
 plot(dat1$DatTime, dat1$Global_reactive_power, type="l", xlab="datetime",ylab="Global_reactive_power")
 ## Close png
