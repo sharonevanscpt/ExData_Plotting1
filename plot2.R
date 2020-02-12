@@ -10,7 +10,7 @@ dato <- read.table("household_power_consumption.txt",header=TRUE,sep=";",quote="
 dato$Date <- as.Date(dato$Date, "%d/%m/%Y")
 ## Subset for required dates
 dat1 <- subset(dato, Date=="2007-02-01"|Date=="2007-02-02")
-## 
+## Create Date/Time column to make dates and times linked
 dat1$DatTime <- as.POSIXct(paste(dat1$Date, dat1$Time), format="%Y-%m-%d %H:%M:%S")
 
 ## Open png of required size and name
